@@ -1,16 +1,11 @@
-# sharksw_aleksey_test
+# Test project
 
-A new Flutter application.
+##### What is the project about:
+This is a test project for applying to the real project.
+In this project was impelented different scrollviews and custom widgets.
+One of the screens has buttons for opening web links.  Some of links opens using url launcher with the default device browser, the others opens with the [Web Browser package](https://pub.dev/packages/web_browser).
+The poject was implemetted with dart sdk 2.12, with `null-safety sound on`.
+Unit tests can't be implemented because there is no busines logic.
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
