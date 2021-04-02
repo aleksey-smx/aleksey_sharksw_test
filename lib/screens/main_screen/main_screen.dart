@@ -51,8 +51,10 @@ class MainScreen extends StatelessWidget {
                         )
                       ],
                     ),
-                    Placeholder(
-                      color: Colors.red,
+                    Center(
+                      child: Image.asset(
+                        'assets/images/image1.png',
+                      ),
                     ),
                     SizedBox(
                       height: 8,

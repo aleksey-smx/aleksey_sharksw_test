@@ -29,9 +29,10 @@ class AppCard extends StatelessWidget {
             SizedBox(
               height: 20,
             ),
-            Placeholder(
-              color: AppColors.grey,
-              fallbackHeight: 298,
+            Center(
+              child: Image.asset(
+                'assets/images/image2.png',
+              ),
             ),
             SizedBox(
               height: 50,
