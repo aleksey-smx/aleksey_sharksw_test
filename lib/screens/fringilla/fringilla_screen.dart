@@ -7,7 +7,7 @@ import 'package:sharksw_aleksey_test/widgets/menu_card.dart';
 class FringillaScreen extends StatelessWidget {
   static const String routeName = '/fringilla';
 
-  final List<BrowserLink> _linksList = [
+   List<BrowserLink> _linksList = [
     BrowserLink(
       title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
       nativeBrowser: true,
@@ -57,6 +57,7 @@ class FringillaScreen extends StatelessWidget {
               shrinkWrap: true,
               itemCount: _linksList.length,
               itemBuilder: (context, index) {
+                print(_linksList[index].title);
                 return MenuCard(
                   link: _linksList[index],
                 );
