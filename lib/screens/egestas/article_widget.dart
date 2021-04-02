@@ -4,11 +4,20 @@ import 'package:sharksw_aleksey_test/theme/app_colors.dart';
 import 'package:sharksw_aleksey_test/theme/app_fonts.dart';
 
 class ArticleWidget extends StatelessWidget {
-  Article article;
+  final Article article;
   ArticleWidget({required this.article});
   @override
   Widget build(BuildContext context) {
     return Container(
+      padding: const EdgeInsets.symmetric(horizontal: 24.0),
+      decoration: BoxDecoration(
+        border: Border(
+          bottom: BorderSide(
+              width: 1,
+              color: Color.fromRGBO(
+                  126, 126, 126, 0.15)), //AppColors.cardGrey),
+        ),
+      ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -43,19 +52,21 @@ class ArticleWidget extends StatelessWidget {
                 padding: EdgeInsets.symmetric(vertical: 10.0),
                 child: RichText(
                   text: TextSpan(
-                      text: '${index + 1}.   ',
-                      style: AppFonts.captionLabel
-                          .copyWith(color: AppColors.textGrey),
-                      children: [
-                        TextSpan(
-                          text: article.paragraph[index],
-                          style: AppFonts.captionLabel.copyWith(),
-                        )
-                      ]),
+                    text: '${index + 1}.   ',
+                    style: AppFonts.captionLabel
+                        .copyWith(color: AppColors.textGrey),
+                    children: [
+                      TextSpan(
+                        text: article.paragraph[index],
+                        style: AppFonts.captionLabel.copyWith(),
+                      )
+                    ],
+                  ),
                 ),
               );
             },
           ),
+
         ],
       ),
     );

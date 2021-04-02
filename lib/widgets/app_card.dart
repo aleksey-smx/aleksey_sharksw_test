@@ -9,7 +9,7 @@ class AppCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.symmetric(horizontal: 2),
+      margin: EdgeInsets.symmetric(horizontal: 6),
       decoration: BoxDecoration(
         color: Color.fromRGBO(126, 126, 126, 0.15),
         borderRadius: BorderRadius.circular(6.0),

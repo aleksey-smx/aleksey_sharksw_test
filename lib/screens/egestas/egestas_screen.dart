@@ -35,16 +35,13 @@ class EgestasScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Padding(
-        padding: const EdgeInsets.only(top: 60.0, left: 24.0, right: 24.0),
-        child: ListView.separated(
+        padding: const EdgeInsets.only(top: 60.0),
+        child: ListView.builder(
           itemCount: _articleList.length,
           itemBuilder: (context, index) {
             return ArticleWidget(
               article: _articleList[index],
             );
-          },
-          separatorBuilder: (BuildContext context, int index) {
-            return AppDivider();
           },
         ),
       ),
