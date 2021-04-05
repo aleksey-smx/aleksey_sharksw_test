@@ -7,8 +7,13 @@ import 'package:sharksw_aleksey_test/theme/app_icons.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class MenuCard extends StatelessWidget {
+  MenuCard({
+    Key? key,
+    required this.link,
+  });
+
   final BrowserLink link;
-  MenuCard({required this.link});
+
   @override
   Widget build(BuildContext context) {
     return InkWell(

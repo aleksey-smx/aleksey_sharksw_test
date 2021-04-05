@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:sharksw_aleksey_test/screens/main_screen/carousel.dart';
+import 'package:sharksw_aleksey_test/widgets/carousel.dart';
 import 'package:sharksw_aleksey_test/theme/app_colors.dart';
 import 'package:sharksw_aleksey_test/theme/app_fonts.dart';
 import 'package:sharksw_aleksey_test/theme/app_icons.dart';
-import 'bottom_items.dart';
+import '../../widgets/bottom_items.dart';
 
 class MainScreen extends StatelessWidget {
   static const String routeName = '/main';
@@ -20,24 +20,34 @@ class MainScreen extends StatelessWidget {
               children: [
                 Container(
                   padding: const EdgeInsets.only(
-                      top: 60.0, left: 24.0, right: 24.0),
+                    top: 60.0,
+                    left: 24.0,
+                    right: 24.0,
+                  ),
                   decoration: BoxDecoration(
                     border: Border(
                       bottom: BorderSide(
                         width: 1,
-                        color: Color.fromRGBO(126, 126, 126, 0.15),
+                        color: Color.fromRGBO(
+                          126,
+                          126,
+                          126,
+                          0.15,
+                        ),
                       ),
                     ),
                   ),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text(
-                        'Fames volutpat.',
-                        style: AppFonts.headline3,
-                      ),
-                      SizedBox(
-                        height: 16,
+                      Padding(
+                        padding: const EdgeInsets.only(
+                          bottom: 16.0,
+                        ),
+                        child: Text(
+                          'Fames volutpat.',
+                          style: AppFonts.headline3,
+                        ),
                       ),
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -56,16 +66,21 @@ class MainScreen extends StatelessWidget {
                               ),
                               IconButton(
                                 icon: SvgPicture.asset(AppIcons.edit),
-                                onPressed: () => null,
+                                onPressed: () => {},
                               )
                             ],
                           )
                         ],
                       ),
-                      Center(
-                        child: Image.asset(
-                          'assets/images/image1.png',
-                          fit: BoxFit.fill,
+                      Padding(
+                        padding: const EdgeInsets.only(
+                          bottom: 8.0,
+                        ),
+                        child: Center(
+                          child: Image.asset(
+                            'assets/images/image1.png',
+                            fit: BoxFit.fill,
+                          ),
                         ),
                       ),
                       SizedBox(
@@ -79,9 +94,14 @@ class MainScreen extends StatelessWidget {
                   decoration: BoxDecoration(
                     border: Border(
                       bottom: BorderSide(
-                          width: 1,
-                          color: Color.fromRGBO(
-                              126, 126, 126, 0.15)), //AppColors.cardGrey),
+                        width: 1,
+                        color: Color.fromRGBO(
+                          126,
+                          126,
+                          126,
+                          0.15,
+                        ),
+                      ), //AppColors.cardGrey),
                     ),
                   ),
                   child: AppCarousel(),

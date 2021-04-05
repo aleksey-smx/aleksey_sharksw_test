@@ -33,7 +33,7 @@ class BottomItems extends StatelessWidget {
             title: 'Consectur',
             onTap: () =>
                 Navigator.pushNamed(context, FringillaScreen.routeName),
-          )
+          ),
         ],
       ),
     );

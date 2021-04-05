@@ -5,16 +5,21 @@ import 'package:sharksw_aleksey_test/theme/app_fonts.dart';
 import 'package:sharksw_aleksey_test/theme/app_icons.dart';
 
 class AppExpandedButton extends StatelessWidget {
+  AppExpandedButton({
+    Key? key,
+    required this.title,
+    required this.onTap,
+  });
   final String title;
   final Function onTap;
-  AppExpandedButton({required this.title, required this.onTap});
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: onTap as Function(),
       child: Container(
         padding: EdgeInsets.symmetric(
-            horizontal: MediaQuery.of(context).size.width * 0.04),
+          horizontal: MediaQuery.of(context).size.width * 0.04,
+        ),
         height: 44,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(2),

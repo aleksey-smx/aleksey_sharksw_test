@@ -4,7 +4,7 @@ import 'package:sharksw_aleksey_test/theme/app_colors.dart';
 class AppDivider extends StatelessWidget {
   @override
   Divider build(BuildContext context) {
-    return Divider(
+    return const Divider(
       color: AppColors.cardGrey,
     );
   }

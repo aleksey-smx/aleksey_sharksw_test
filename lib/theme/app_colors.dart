@@ -18,4 +18,5 @@ class AppColors {
   static const Color disabledGrey = Color(0xff636363);
   static const Color outlineGrey = Color(0xb37E7E7E);
   static const Color cardGrey = Color(0xff7e7e7e);
+  static const Color greyWithOpacity = Color.fromRGBO(126, 126, 126, 0.15);
 }

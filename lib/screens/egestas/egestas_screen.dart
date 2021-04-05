@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:sharksw_aleksey_test/models/article.dart';
-import 'package:sharksw_aleksey_test/screens/egestas/article_widget.dart';
-import 'package:sharksw_aleksey_test/widgets/app_divider.dart';
+import 'package:sharksw_aleksey_test/widgets/article_widget.dart';
 
 class EgestasScreen extends StatelessWidget {
   static const String routeName = '/egestas';
 
-  List<Article> _articleList = [
+  final List<Article> _articleList = [
     Article(
       title: 'Pellentesque nulla enim sed.',
       subTitle:
@@ -35,7 +34,9 @@ class EgestasScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Padding(
-        padding: const EdgeInsets.only(top: 60.0),
+        padding: const EdgeInsets.only(
+          top: 60.0,
+        ),
         child: ListView.builder(
           itemCount: _articleList.length,
           itemBuilder: (context, index) {

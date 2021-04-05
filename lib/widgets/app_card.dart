@@ -4,14 +4,14 @@ import 'package:sharksw_aleksey_test/theme/app_fonts.dart';
 
 class AppCard extends StatelessWidget {
   final int index;
-  AppCard({required this.index});
+  const AppCard({Key? key, required this.index});
 
   @override
   Widget build(BuildContext context) {
     return Container(
       margin: EdgeInsets.symmetric(horizontal: 6),
       decoration: BoxDecoration(
-        color: Color.fromRGBO(126, 126, 126, 0.15),
+        color: AppColors.greyWithOpacity,
         borderRadius: BorderRadius.circular(6.0),
         border: Border.all(
           color: AppColors.cardGrey,
@@ -22,34 +22,34 @@ class AppCard extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(
-              index.toString(),
-              style: AppFonts.display,
-            ),
-            SizedBox(
-              height: 20,
-            ),
-            Center(
-              child: Image.asset(
-                'assets/images/image2.png',
+            Padding(
+              padding: const EdgeInsets.only(bottom: 20.0),
+              child: Text(
+                index.toString(),
+                style: AppFonts.display,
               ),
             ),
-            SizedBox(
-              height: 50,
+            Padding(
+              padding: const EdgeInsets.only(bottom: 50.0),
+              child: Center(
+                child: Image.asset(
+                  'assets/images/image2.png',
+                ),
+              ),
             ),
-            Text(
-              'Lorem Ipsum',
-              style: AppFonts.headline3,
+            Padding(
+              padding: const EdgeInsets.only(bottom: 12.0),
+              child: Text(
+                'Lorem Ipsum',
+                style: AppFonts.headline3,
+              ),
             ),
-            SizedBox(
-              height: 12,
-            ),
-            Text(
-              'Dui mattis risus elit purus feugiat quis in sit.',
-              style: AppFonts.bodyRegular,
-            ),
-            SizedBox(
-              height: 18,
+            Padding(
+              padding: const EdgeInsets.only(bottom: 18.0),
+              child: Text(
+                'Dui mattis risus elit purus feugiat quis in sit.',
+                style: AppFonts.bodyRegular,
+              ),
             ),
             Text(
               'Egestas scelerisque vel.',

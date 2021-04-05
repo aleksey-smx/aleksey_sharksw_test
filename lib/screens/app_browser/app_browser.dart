@@ -6,10 +6,12 @@ import 'package:sharksw_aleksey_test/theme/app_icons.dart';
 import 'package:web_browser/web_browser.dart';
 
 class AppBrowser extends StatelessWidget {
+  AppBrowser({
+    Key? key,
+    required this.url,
+  });
   static const String routeName = '/browser';
   final String url;
-
-  AppBrowser({required this.url});
   @override
   Widget build(BuildContext context) {
     return SafeArea(

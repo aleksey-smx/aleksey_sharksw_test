@@ -7,7 +7,7 @@ import 'package:sharksw_aleksey_test/widgets/menu_card.dart';
 class FringillaScreen extends StatelessWidget {
   static const String routeName = '/fringilla';
 
-   List<BrowserLink> _linksList = [
+  final  List<BrowserLink> _linksList = [
     BrowserLink(
       title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
       nativeBrowser: true,
@@ -44,11 +44,14 @@ class FringillaScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(
-              'Fringilla vulputate.',
-              style: AppFonts.headline3,
+            Padding(
+              padding: const EdgeInsets.only(bottom: 20.0),
+              child: Text(
+                'Fringilla vulputate.',
+                style: AppFonts.headline3,
+              ),
             ),
-            SizedBox(height: 20,),
+
             Text(
               'Massa risus.',
               style: AppFonts.bodyRegular,
@@ -65,7 +68,7 @@ class FringillaScreen extends StatelessWidget {
             ),
             AppButton(
               buttonTitle: 'Lorem Ipsum',
-              onPressed: () => null,
+              onPressed: () => {},
             ),
           ],
         ),

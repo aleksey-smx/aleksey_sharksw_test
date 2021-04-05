@@ -6,12 +6,16 @@ import 'package:sharksw_aleksey_test/widgets/app_card.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class AppCarousel extends StatelessWidget {
-  final PageController _controller =
-      PageController(initialPage: 0, viewportFraction: 0.9);
+  final PageController _controller = PageController(
+    initialPage: 0,
+    viewportFraction: 0.9,
+  );
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.symmetric(vertical: 24),
+      padding: EdgeInsets.symmetric(
+        vertical: 24,
+      ),
       child: Column(
         children: [
           Row(
